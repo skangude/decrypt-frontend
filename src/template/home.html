@@ -1,0 +1,15 @@
+<form ng-submit="FileCtrl.submitForm()" id="decryptForm" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="plainTextFile">Plaintext file:</label>
+    <input type="file" name="plainTextFile" id="plainTextFile">
+    <!-- <input type="file" name="plainTextFile" id="plainTextFile" file-input="plainTextFile" ng-change='FileCtrl.filesChanged()'> -->
+    <small>Upload a long plain text file that can be used as a reference for frequency analysis.</small>
+  </div>
+  <div class="">
+    <label for="encrFilr">Encrypted file:</label>
+    <input type="file" name="encrFile" id="encrFile">
+    <small>Upload an encrypted file that you'd like to decrypt.</small>
+  </div>
+
+  <button type="submit"  name="decrypt" class="btn btn-primary">Decrypt</button>
+</form>

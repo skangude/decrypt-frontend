@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Decrypter using reference plain text</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/css/master.css"> -->
+  </head>
+  <body ng-app="Decrypter">
+    <div class="container">
+      <h1>Decrypter Using Reference Text</h1>
+      <p>This app allows one to upload a reference plain text file,
+        which is used to decrypt an encrypted file using character
+        and n-gram frequency analysis. </p>
+      <ul>
+        The encrypted text should have the following characteristics:
+        <li>The encryption should be a simple character mapping encryption called
+          <a href="http://practicalcryptography.com/ciphers/simple-substitution-cipher/">Simple Substitution Cipher</a>.
+        </li>
+        <li>The language characteristics of the reference plain text file should be the same that of the file that is encrypted.
+          Similar characteristics implies similar character and n-gram frequencies at a high level.</li>
+      </ul>
+
+      <!-- <form class="" name="decrptForm" id="decryptForm" action="http://localhost:3000/decrypter/decrypt" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="plainTextFile">Plaintext file:</label>
+          <input type="file" name="plainTextFile" id="plainTextFile">
+          <small>Upload a long plain text file that can be used as a refrence for frequency analysis.</small>
+        </div>
+        <div class="">
+          <label for="encrFilr">Encrypted file:</label>
+          <input type="file" name="encrFile" id="encrFile">
+          <small>Upload an encrypted file that you'd like to decrypt.</small>
+        </div>
+
+        <button type="submit" name="decrypt" class="btn btn-primary">Decrypt</button>
+      </form> -->
+
+
+      <ui-view></ui-view>
+      <loading-spinner></loading-spinner>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <script src="src/Decrypter/decrypter.module.js"></script>
+    <script src="src/Data/data.module.js"></script>
+    <script src="src/routes.js"></script>
+
+    <script src="src/Data/data.service.js"></script>
+    <script src="src/Decrypter/decryption.controller.js"></script>
+    <!-- <script src="src/Decrypter/categories.component.js"></script> -->
+    <script src="src/Decrypter/file.controller.js"></script>
+    <script src="src/Decrypter/loading.spinner.component.js"></script>
+    <script src="src/Decrypter/spinner.controller.js"></script>
+    <!-- <script src="src/Decrypter/items.component.js"></script> -->
+
+
+  </body>
+</html>
